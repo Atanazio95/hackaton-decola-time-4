@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Inicio from '../views/Inicio.vue'
 import ListaProfissionais from '../views/ListaProfissionais.vue'
 import PerfilUsuario from '../views/PerfilUsuario.vue'
+import PerfilProfissional from '../views/PerfilProfissional.vue'
 
 
 Vue.use(VueRouter)
@@ -22,6 +23,16 @@ const routes = [
     path: '/perfilusuario',
     name: 'PerfilUsuario',
     component: PerfilUsuario
+  },
+  {
+    path: '/perfilprofissional',
+    name: 'PerfilProfissional',
+    component: PerfilProfissional
+  },
+  {
+    path: '/perfilprofissional/:id',
+    name: 'PerfilProfissional',
+    component: PerfilProfissional
   },
 
 ]

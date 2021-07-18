@@ -21,7 +21,7 @@
                    <div class="text-center">
     <v-bottom-sheet v-model="sheet">
       <template v-slot:activator="{ on, attrs }">
-        <router-link to="/perfilusuario">
+        <router-link :to="`/perfilprofissional/${profissional.nome}`">
         <v-btn
         class="botton-perfil"
           color= #0066CC

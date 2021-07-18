@@ -1,10 +1,12 @@
 <template>
+<div>
   <v-card
     max-width="375"
     class="mx-auto"
+   
   >
     <v-img
-      src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"
+      :src="profissional.imagem"
       height="300px"
       dark
     >
@@ -12,8 +14,8 @@
         
 
         <v-card-title class="white--text name pl-6 pt-12">
-          <div class="text-h4">
-            Mark Zuckerberg
+          <div class="text-h5">
+            {{ profissional.nome }}
           </div>
         </v-card-title>
       </v-row>
@@ -41,8 +43,8 @@
         <v-list-item-action></v-list-item-action>
 
         <v-list-item-content>
-          <v-list-item-title>(11) 555-6789</v-list-item-title>
-          <v-list-item-subtitle>Telefone</v-list-item-subtitle>
+          <v-list-item-title>{{profissional.signo}}</v-list-item-title>
+          <v-list-item-subtitle>Signo</v-list-item-subtitle>
         </v-list-item-content>
 
         
@@ -70,7 +72,10 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title></v-list-item-title>
+          <v-list-item-title>{{profissional.servicos[0]}}, 
+              {{profissional.servicos[1]}}, 
+              {{profissional.servicos[2]}}
+          </v-list-item-title>
           <v-list-item-subtitle>Serviços</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -87,8 +92,8 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>1400 Main Street</v-list-item-title>
-          <v-list-item-subtitle>Orlando, FL 79938</v-list-item-subtitle>
+          <v-list-item-title>{{profissional.local}}</v-list-item-title>
+          <v-list-item-subtitle>Localização</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
       <v-list-item>
@@ -111,7 +116,27 @@
       </v-list-item>
     </v-list>
   </v-card>
+</div>
 </template>
+<script>
+export default {
+    data () {
+                
+      return{
+        profissional: {}
+      }
+    },
+    
+
+    created() {
+      fetch('https://it3-gdf-default-rtdb.firebaseio.com/saude/profissionais.json')
+      .then(resposta => resposta.json())
+      .then(json => {
+        this.profissional= json[0]
+      });
+    }
+}
+</script>
 <style scoped>
 .botton-redes {
     margin: 15px;
