@@ -70,8 +70,8 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title></v-list-item-title>
-          <v-list-item-subtitle>Serviços</v-list-item-subtitle>
+          <v-list-item-title>Empresário</v-list-item-title>
+          <v-list-item-subtitle>Ocupação</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -87,8 +87,8 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>1400 Main Street</v-list-item-title>
-          <v-list-item-subtitle>Orlando, FL 79938</v-list-item-subtitle>
+          <v-list-item-title>White Plains, NY</v-list-item-title>
+          <v-list-item-subtitle>Endereço</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
       <v-list-item>
