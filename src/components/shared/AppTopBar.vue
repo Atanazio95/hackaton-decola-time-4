@@ -25,7 +25,7 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="/classificacao">
+          <router-link to="/ListaProfissionais">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-bag-checked</v-icon>

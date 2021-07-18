@@ -1,21 +1,25 @@
 <template>
  <v-app>
    <AppTopBar/>
-   <Inicio/>
+   <v-main>
+     <router-view/>
+   </v-main>
+  
  </v-app>
 </template>
 
 <script>
 
 import AppTopBar from './components/shared/AppTopBar.vue'
-import Inicio from './views/Inicio.vue'
+
 
 export default {
   name: "App",
 
   components: { 
-    Inicio,
+    
     AppTopBar,
+    
   },
 
   
