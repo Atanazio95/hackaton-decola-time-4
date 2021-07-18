@@ -3,7 +3,7 @@
     <template v-slot:default>
       
       <tbody>
-          <tr  v-for="profissional of listaProfissionais" :key="profissional.nome">
+          <tr  v-for="(profissional, index) of listaProfissionais" :key="profissional.nome">
             <v-container class="profissional-lista">
                  <td>
                     <v-avatar center>
@@ -21,7 +21,7 @@
                    <div class="text-center">
     <v-bottom-sheet v-model="sheet">
       <template v-slot:activator="{ on, attrs }">
-        <router-link :to="`/perfilprofissional/${profissional.nome}`">
+        <router-link :to="`/perfilprofissional/${index}`">
         <v-btn
         class="botton-perfil"
           color= #0066CC
