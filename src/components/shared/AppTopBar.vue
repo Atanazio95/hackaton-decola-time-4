@@ -36,6 +36,17 @@
             </v-list-item>
           </router-link>
 
+           <router-link to="/perfilusuario">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>
+                Perfil
+              </v-list-item-title>
+            </v-list-item>
+          </router-link>
+
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -61,3 +72,5 @@ export default {
   color: white;
 }
 </style>
+
+
