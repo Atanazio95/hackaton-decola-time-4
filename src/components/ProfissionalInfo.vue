@@ -135,3 +135,13 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.botton-redes {
+    margin: 15px;
+
+}
+.name {
+    flex-direction: column-reverse;
+}
+</style>
